@@ -1,0 +1,91 @@
+/* Ensure entire dialog is black */
+::ng-deep .mat-mdc-dialog-surface,
+::ng-deep .mat-mdc-dialog-container {
+  background: #000000 !important;
+  border-radius: 16px !important;
+  max-width: 400px !important;
+}
+
+/* Remove any white backgrounds */
+::ng-deep * {
+  background-color: transparent !important;
+}
+
+::ng-deep .mat-mdc-dialog-container {
+  background: #000000 !important;
+}
+
+.dialog-header {
+  text-align: center;
+  padding: 20px 0 10px;
+  background: #000000 !important;
+}
+
+.warning-icon {
+  font-size: 48px !important;
+  width: 48px !important;
+  height: 48px !important;
+  color: #ff6b6b;
+}
+
+h2[mat-dialog-title] {
+  text-align: center;
+  color: #ffffff !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  margin: 0 0 16px 0 !important;
+  background: #000000 !important;
+}
+
+mat-dialog-content {
+  text-align: center;
+  padding: 0 24px 24px !important;
+  background: #000000 !important;
+}
+
+.confirm-message {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin-bottom: 12px;
+  background: transparent !important;
+}
+
+.confirm-message strong {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.warning-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  margin: 0;
+  background: transparent !important;
+}
+
+mat-dialog-actions {
+  justify-content: center !important;
+  padding: 16px 24px !important;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #000000 !important;
+}
+
+.cancel-btn {
+  color: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 8px !important;
+  padding: 8px 24px !important;
+  background: #000000 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.delete-btn {
+  background: #ff4444 !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 8px 24px !important;
+}

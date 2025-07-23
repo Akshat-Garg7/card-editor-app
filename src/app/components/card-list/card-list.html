@@ -1,0 +1,31 @@
+<div class="container">
+  <header class="header">
+    <div class="title-wrapper">
+      <h1 class="main-title">
+        <span class="title-icon">📋</span>
+        <span class="title-text">Card Management System</span>
+        <span class="title-badge">Pro</span>
+      </h1>
+      <p class="subtitle">Organize, track, and manage your project cards efficiently</p>
+    </div>
+    <button mat-raised-button color="accent" (click)="onAddCard()" class="add-button">
+      <mat-icon>add</mat-icon> Add New Card
+    </button>
+  </header>
+  
+  <div class="cards-container" *ngIf="cards$ | async as cards">
+    <div class="cards-grid" *ngIf="cards.length > 0">
+      <app-card-item 
+        *ngFor="let card of cards" 
+        [card]="card"
+        (edit)="onEditCard($event)"
+        (delete)="onDeleteCard($event)">
+      </app-card-item>
+    </div>
+    
+    <div *ngIf="cards.length === 0" class="empty-state">
+      <mat-icon>inbox</mat-icon>
+      <p>No cards available. Click "Add New Card" to create one.</p>
+    </div>
+  </div>
+</div>

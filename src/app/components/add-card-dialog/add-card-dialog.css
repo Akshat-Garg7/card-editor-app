@@ -1,0 +1,134 @@
+/* Ensure entire dialog is black */
+::ng-deep .mat-mdc-dialog-surface,
+::ng-deep .mat-mdc-dialog-container {
+  background: #000000 !important;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+  background: #000000;
+}
+
+h2[mat-dialog-title] {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  background: #000000 !important;
+}
+
+.add-icon {
+  color: #f093fb;
+  font-size: 28px !important;
+}
+
+.close-button {
+  color: rgba(255, 255, 255, 0.5) !important;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  color: rgba(255, 255, 255, 0.9) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+mat-dialog-content {
+  padding: 0 24px 24px !important;
+  min-width: 500px;
+  background: #000000 !important;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Force black background for form fields */
+::ng-deep .mat-mdc-text-field-wrapper {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 4px !important;
+}
+
+::ng-deep .mdc-text-field {
+  background: transparent !important;
+}
+
+::ng-deep .mdc-text-field--filled {
+  background: transparent !important;
+}
+
+::ng-deep .mdc-text-field__ripple::before,
+::ng-deep .mdc-text-field__ripple::after {
+  background: transparent !important;
+}
+
+::ng-deep .mat-mdc-form-field-fill {
+  background-color: transparent !important;
+}
+
+::ng-deep .mat-mdc-form-field-outline {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+::ng-deep .mat-mdc-form-field:hover .mat-mdc-form-field-outline {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+::ng-deep .mat-mdc-form-field.mat-focused .mat-mdc-form-field-outline {
+  color: #f093fb !important;
+}
+
+::ng-deep .mat-mdc-floating-label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  background-color: #000000 !important;
+  padding: 0 8px !important;
+}
+
+::ng-deep input.mat-mdc-input-element,
+::ng-deep textarea.mat-mdc-input-element {
+  color: #ffffff !important;
+  font-size: 16px;
+  line-height: 1.6;
+  background: transparent !important;
+  caret-color: #ffffff !important;
+}
+
+::ng-deep .mat-mdc-form-field-icon-prefix {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+mat-dialog-actions {
+  justify-content: flex-end !important;
+  padding: 16px 24px !important;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #000000 !important;
+}
+
+.cancel-btn {
+  color: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 8px 20px !important;
+  background: #000000 !important;
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.add-btn {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 8px 20px !important;
+}

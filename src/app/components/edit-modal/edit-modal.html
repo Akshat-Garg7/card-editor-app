@@ -1,0 +1,53 @@
+<div class="dialog-header">
+  <h2 mat-dialog-title>
+    <mat-icon class="edit-icon">edit_note</mat-icon>
+    Edit Card
+  </h2>
+  <button mat-icon-button (click)="onCancel()" class="close-button">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<mat-dialog-content>
+  <form [formGroup]="editForm">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Title</mat-label>
+      <input 
+        matInput 
+        formControlName="title" 
+        >
+      <mat-icon matPrefix>title</mat-icon>
+      <mat-error *ngIf="editForm.get('title')?.hasError('required')">
+        Title is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Description</mat-label>
+      <textarea 
+        matInput 
+        formControlName="description" 
+        rows="5"
+        >
+      </textarea>
+      <mat-icon matPrefix>description</mat-icon>
+      <mat-error *ngIf="editForm.get('description')?.hasError('required')">
+        Description is required
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-stroked-button (click)="onCancel()" class="cancel-btn">
+    Cancel
+  </button>
+  <button 
+    mat-raised-button 
+    (click)="onSave()"
+    [disabled]="editForm.invalid"
+    class="save-btn">
+    <mat-icon>save</mat-icon>
+    Save Changes
+  </button>
+</mat-dialog-actions>

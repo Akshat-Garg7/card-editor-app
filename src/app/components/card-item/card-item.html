@@ -1,0 +1,16 @@
+<mat-card class="card-item">
+  <mat-card-header>
+    <mat-card-title>{{ card.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="description">{{ card.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onEdit()">
+      <mat-icon>edit</mat-icon> Edit
+    </button>
+    <button mat-button color="warn" (click)="onDelete()">
+      <mat-icon>delete</mat-icon> Delete
+    </button>
+  </mat-card-actions>
+</mat-card>

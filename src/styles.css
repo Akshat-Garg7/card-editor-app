@@ -1,1 +1,193 @@
-/* You can add global styles to this file, and also import other style files */
+.custom-dialog-container {
+  animation: dialogSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes dialogSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.cdk-overlay-backdrop {
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cdk-overlay-pane {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #000000;  
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(120, 80, 200, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(240, 147, 251, 0.1) 0%, transparent 50%);
+  z-index: -1;
+}
+
+.mat-mdc-dialog-container {
+  background: #000000 !important;  
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8) !important;
+}
+
+::ng-deep .mat-mdc-dialog-surface {
+  background: #000000 !important;
+}
+
+::ng-deep .mat-mdc-dialog-container {
+  background: #000000 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+::ng-deep .cdk-overlay-pane {
+  background: transparent !important;
+}
+
+/* Fix white backgrounds in form fields globally */
+::ng-deep .mat-mdc-text-field-wrapper {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+::ng-deep .mdc-text-field {
+  background: transparent !important;
+}
+
+::ng-deep .mdc-text-field__input {
+  background: transparent !important;
+}
+
+/* Force dark backdrop for all dialogs */
+.cdk-overlay-backdrop {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  opacity: 1 !important;
+}
+
+.cdk-overlay-dark-backdrop {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  opacity: 1 !important;
+}
+
+/* Ensure overlay container stays transparent */
+.cdk-overlay-container {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Prevent any white background when dialog is open */
+.cdk-global-overlay-wrapper {
+  background: transparent !important;
+}
+
+/* Force ALL overlays and backdrops to be dark */
+.cdk-overlay-backdrop {
+  background-color: #000000 !important;
+  opacity: 0.8 !important;
+}
+
+.cdk-overlay-backdrop-showing {
+  opacity: 0.8 !important;
+}
+
+/* Target the specific white background issue */
+.cdk-overlay-pane {
+  background: transparent !important;
+}
+
+.cdk-global-overlay-wrapper {
+  background: transparent !important;
+}
+
+/* Force dark background on body when modal is open */
+body.cdk-global-scrollblock {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
+  background: #000000 !important;
+}
+
+/* Ensure html stays black */
+html {
+  background: #000000 !important;
+}
+
+/* Target Material Dialog backdrop specifically */
+.mat-dialog-container {
+  background: transparent !important;
+}
+
+/* Override any white backgrounds globally when dialog is open */
+* {
+  background-clip: padding-box;
+}
+
+/* More specific targeting for the backdrop */
+.cdk-overlay-container .cdk-overlay-backdrop {
+  background: #000000 !important;
+  opacity: 0.8 !important;
+}
+
+/* Ensure no white flashes */
+.cdk-overlay-container {
+  z-index: 1000;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Target any potential white background from Angular Material */
+::ng-deep .cdk-overlay-backdrop {
+  background: #000000 !important;
+  opacity: 0.8 !important;
+}
+
+::ng-deep .mat-dialog-container {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2), 
+              0px 24px 38px 3px rgba(0,0,0,0.14), 
+              0px 9px 46px 8px rgba(0,0,0,0.12) !important;
+}
