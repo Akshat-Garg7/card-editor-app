@@ -41,7 +41,7 @@ h2[mat-dialog-title] {
 }
 
 mat-dialog-content {
-  padding: 0 24px 24px !important;
+  padding: 0 10px;
   min-width: 500px;
   background: #000000 !important;
 }
