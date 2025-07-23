@@ -76,7 +76,6 @@ body::before {
   background: transparent !important;
 }
 
-/* Fix white backgrounds in form fields globally */
 ::ng-deep .mat-mdc-text-field-wrapper {
   background: rgba(255, 255, 255, 0.05) !important;
 }
@@ -89,7 +88,6 @@ body::before {
   background: transparent !important;
 }
 
-/* Force dark backdrop for all dialogs */
 .cdk-overlay-backdrop {
   background-color: rgba(0, 0, 0, 0.8) !important;
   opacity: 1 !important;
@@ -100,7 +98,6 @@ body::before {
   opacity: 1 !important;
 }
 
-/* Ensure overlay container stays transparent */
 .cdk-overlay-container {
   position: fixed;
   pointer-events: none;
@@ -116,12 +113,10 @@ body::before {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
-/* Prevent any white background when dialog is open */
 .cdk-global-overlay-wrapper {
   background: transparent !important;
 }
 
-/* Force ALL overlays and backdrops to be dark */
 .cdk-overlay-backdrop {
   background-color: #000000 !important;
   opacity: 0.8 !important;
@@ -131,7 +126,6 @@ body::before {
   opacity: 0.8 !important;
 }
 
-/* Target the specific white background issue */
 .cdk-overlay-pane {
   background: transparent !important;
 }
@@ -140,7 +134,6 @@ body::before {
   background: transparent !important;
 }
 
-/* Force dark background on body when modal is open */
 body.cdk-global-scrollblock {
   position: fixed;
   width: 100%;
@@ -148,28 +141,23 @@ body.cdk-global-scrollblock {
   background: #000000 !important;
 }
 
-/* Ensure html stays black */
 html {
   background: #000000 !important;
 }
 
-/* Target Material Dialog backdrop specifically */
 .mat-dialog-container {
   background: transparent !important;
 }
 
-/* Override any white backgrounds globally when dialog is open */
 * {
   background-clip: padding-box;
 }
 
-/* More specific targeting for the backdrop */
 .cdk-overlay-container .cdk-overlay-backdrop {
   background: #000000 !important;
   opacity: 0.8 !important;
 }
 
-/* Ensure no white flashes */
 .cdk-overlay-container {
   z-index: 1000;
   position: fixed;
@@ -180,7 +168,6 @@ html {
   width: 100%;
 }
 
-/* Target any potential white background from Angular Material */
 ::ng-deep .cdk-overlay-backdrop {
   background: #000000 !important;
   opacity: 0.8 !important;
